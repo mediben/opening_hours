@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+
+  application:
+    container_name: opening-hours-app
+    build:
+      context: ./
+    ports:
+      - 5230:5230
+
+  # test:
+  #   build: 
+  #     context: ./
+  #     dockerfile: Dockerfile-test
+  #   volumes:
+  #     - ./src/:/usr/src/app/
+  #   stdin_open: true
+  #   environment:
+  #     - TEST_PORT=5220
+  #   depends_on:
+  #     - application
